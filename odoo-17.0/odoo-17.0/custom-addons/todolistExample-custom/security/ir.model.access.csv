@@ -1,0 +1,5 @@
+id,name,model-id:id,group-id:id,perm-read,perm-write,perm-creat,perm_unlink
+
+access_user, TodoTask For User,model-todo_task,base.group_user,1,1,1,0
+
+access_manager,TodoTask for Manager,model_todo_task,base.group_system

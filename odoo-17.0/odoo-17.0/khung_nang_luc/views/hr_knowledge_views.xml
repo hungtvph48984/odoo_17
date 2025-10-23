@@ -1,0 +1,37 @@
+<odoo>
+    <record id="view_hr_knowledge_tree" model="ir.ui.view">
+        <field name="name">hr.knowledge.tree</field>
+        <field name="model">hr.knowledge</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="category"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_knowledge_form" model="ir.ui.view">
+        <field name="name">hr.knowledge.form</field>
+        <field name="model">hr.knowledge</field>
+        <field name="arch" type="xml">
+            <form string="Danh mục kiến thức">
+                <group>
+                    <field name="name"/>
+                    <field name="category"/>
+                    <field name="description"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_khung_nang_luc_root" name="Khung năng lực" sequence="1"/>
+    <menuitem id="menu_khung_nang_luc_cauhinh" name="Cấu hình" parent="menu_khung_nang_luc_root"/>
+    <menuitem id="menu_hr_knowledge" name="Danh mục kiến thức" parent="menu_khung_nang_luc_cauhinh" action="action_hr_knowledge"/>
+
+    <record id="action_hr_knowledge" model="ir.actions.act_window">
+        <field name="name">Danh mục kiến thức</field>
+        <field name="res_model">hr.knowledge</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

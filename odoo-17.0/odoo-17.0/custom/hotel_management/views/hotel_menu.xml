@@ -1,0 +1,7 @@
+<odoo>
+    <menuitem id="menu_hotel_root" name="Hotel Management"/>
+    <menuitem id="menu_hotel_room"
+              name="Rooms"
+              parent="menu_hotel_root"
+              action="action_hotel_room"/>
+</odoo>

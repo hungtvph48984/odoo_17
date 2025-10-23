@@ -1,0 +1,45 @@
+<odoo>
+    <!-- Định nghĩa view form cho todo.task -->
+    <record id="id_todo_task_form" model="ir.ui.view">
+        <field name="name">todo.task.form</field>
+        <field name="model">todo.task</field>
+        <field name="arch" type="xml">
+            <form string="Todo Task">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="done"/>
+                        <field name="due_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Định nghĩa view list cho todo.task -->
+    <record id="view_todo_task_list" model="ir.ui.view">
+        <field name="name">todo.task.list</field>
+        <field name="model">todo.task</field>
+        <field name="arch" type="xml">
+            <tree string="Todo Tasks">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="done"/>
+                <field name="due_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Định nghĩa action cho todo.task -->
+    <record id="todo_task_action" model="ir.actions.act_window">
+        <field name="name">Todo Tasks</field>
+        <field name="res_model">todo.task</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Định nghĩa menu item cho TodoList và Tasks -->
+   <menuitem id="todo_menu" name="TodoList" sequence="10" groups="base.group_user"/>
+<menuitem id="todo_task_menu" name="Tasks" parent="todo_menu" action="todo_task_action" groups="base.group_user"/>
+
+</odoo>
