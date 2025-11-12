@@ -1,6 +1,0 @@
-"id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hr_knowledge,access_hr_knowledge,model_hr_knowledge,base.group_user,1,1,1,1
-access_hr_competency_level,access_hr_competency_level,model_hr_competency_level,base.group_user,1,1,1,1
-access_hr_competency_dictionary,access_hr_competency_dictionary,model_hr_competency_dictionary,base.group_user,1,1,1,1
-access_hr_pmgm_period,access_hr_pmgm_period,model_hr_pmgm_period,base.group_user,1,1,1,1
-"

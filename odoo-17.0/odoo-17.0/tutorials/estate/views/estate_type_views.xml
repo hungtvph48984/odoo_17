@@ -1,0 +1,27 @@
+<odoo>
+    <record id="view_form_estate_type" model="ir.ui.view">
+        <field name="name">estate.type.form</field>
+        <field name="model">estate.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="property_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_estate_type" model="ir.ui.view">
+        <field name="name">estate.type.tree</field>
+        <field name="model">estate.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="property_ids"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
